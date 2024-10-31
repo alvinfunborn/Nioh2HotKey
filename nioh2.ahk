@@ -1,3 +1,6 @@
+#SuspendExempt
+F12::Suspend  ; 按F12开启/关闭
+#SuspendExempt False
 HotIfWinActive("Nioh2 1.28.08") ; 仅在"Nioh2 1.28.08"窗口活动时启用
 
 ; 游戏内设置按键
