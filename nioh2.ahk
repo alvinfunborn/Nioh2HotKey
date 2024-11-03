@@ -13,24 +13,16 @@ settings_high_stance := "6" ; 上段
 settings_sheatsh := "9" ; 收刀
 settings_quick_attack := "LButton" ; 轻击
 settings_strong_attack := "RButton" ; 重击
-settings_item_shortcut1 := "[" ; 道具快捷键1
-settings_item_shortcut2 := ";" ; 道具快捷键2
-settings_item_shortcut3 := "]" ; 道具快捷键3
-settings_item_shortcut4 := "/" ; 道具快捷键4
 settings_swap_melee := "," ; 切换近战武器
 
 ; 自定义按键
 hotkey_dodge_dash := "Space" ; 防御闪避/奔跑 -> Space
-hotkey_guard_quick_attack := "a" ; 防御轻击 -> LShift+LButton
-hotkey_guard_strong_attack := "g" ; 防御重击 -> LShift+RButton
-hotkey_sheatsh_and_low_stance := "z" ; 下段/下段居合 -> z
+hotkey_guard_quick_attack := "a" ; 防御轻击 -> a
+hotkey_guard_strong_attack := "g" ; 防御重击 -> g
+hotkey_sheatsh_and_low_stance := "LShift" ; 下段/下段居合 -> LShift
 hotkey_sheatsh_and_mid_stance := "XButton1" ; 中段/中段居合/中段弹反 -> 鼠标侧键1
 hotkey_sheatsh_and_high_stance := "XButton2" ; 上段/上段居合 -> 鼠标侧键2
-hotkey_item_shortcut1 := "+e" ; 道具快捷键1 -> LShift+w
-hotkey_item_shortcut2 := "+s" ; 道具快捷键2 -> LShift+s
-hotkey_item_shortcut3 := "+f" ; 道具快捷键3 -> LShift+f
-hotkey_item_shortcut4 := "+d" ; 道具快捷键4 -> LShift+d
-hotkey_swap_melee := "LCtrl" ; 紫电 -> LCtrl
+hotkey_swap_melee := "WheelUp" ; 紫电 -> 滚轮向上
 
 ; 启用自定义按键(不启用的行可以删掉)
 Hotkey hotkey_dodge_dash, dodge_dash ; 单击防御闪避/长按奔跑(类只狼)
@@ -39,10 +31,6 @@ Hotkey hotkey_guard_strong_attack, guard_strong_attack ; 防御重击
 Hotkey hotkey_sheatsh_and_low_stance, sheatsh_and_low_stance ; 单击下段/双击(第二击长按)下段居合
 Hotkey hotkey_sheatsh_and_mid_stance, sheatsh_and_mid_stance ; 单击中段/双击(第二击长按)中段居合/长按中段弹反
 Hotkey hotkey_sheatsh_and_high_stance, sheatsh_and_high_stance ; 单击上段/双击(第二击长按)上段居合
-Hotkey hotkey_item_shortcut1, item_shortcut1 ; 道具快捷键1
-Hotkey hotkey_item_shortcut2, item_shortcut2 ; 道具快捷键2
-Hotkey hotkey_item_shortcut3, item_shortcut3 ; 道具快捷键3
-Hotkey hotkey_item_shortcut4, item_shortcut4 ; 道具快捷键4
 Hotkey hotkey_swap_melee, swap_melee ; 紫电
 
 
@@ -201,30 +189,6 @@ sheatsh_and_high_stance(ThisHotkey) {
             }
         }
     }
-}
-
-item_shortcut1(ThisHotkey) {
-    Send key_down(settings_item_shortcut1)
-    Sleep 30
-    Send key_up(settings_item_shortcut1)
-}
-
-item_shortcut2(ThisHotkey) {
-    Send key_down(settings_item_shortcut2)
-    Sleep 30
-    Send key_up(settings_item_shortcut2)
-}
-
-item_shortcut3(ThisHotkey) {
-    Send key_down(settings_item_shortcut3)
-    Sleep 30
-    Send key_up(settings_item_shortcut3)
-}
-
-item_shortcut4(ThisHotkey) {
-    Send key_down(settings_item_shortcut4)
-    Sleep 30
-    Send key_up(settings_item_shortcut4)
 }
 
 swap_melee(ThisHotkey) {
